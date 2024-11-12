@@ -8,9 +8,8 @@ import importPlugin from 'eslint-plugin-import'
 import pluginReact from 'eslint-plugin-react'
 import tailwindcss from 'eslint-plugin-tailwindcss'
 
-export default tseslint.config(pluginReact.configs.flat.recommended, {
+export default tseslint.config({ ignores: ['dist', 'node_modules'] }, pluginReact.configs.flat.recommended, {
   files: ['**/*.{ts,tsx,js,jsx}'],
-  ignores: ['dist', 'node_modules'],
   languageOptions: {
     ecmaVersion: 'latest',
     globals: globals.browser,
@@ -27,7 +26,6 @@ export default tseslint.config(pluginReact.configs.flat.recommended, {
   },
   rules: {
     'no-console': ['warn', { allow: ['error', 'warn', 'debug'] }],
-    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     'react/react-in-jsx-scope': 'off',
     'prettier/prettier': 'error',
     'react/prop-types': 'off',
