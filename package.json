@@ -1,0 +1,72 @@
+{
+  "name": "professional-landing",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "NODE_ENV=production node dist/server/index.cjs",
+    "build": "tsc -b && pnpm build:client && pnpm build:ssr && pnpm build:server",
+    "build:client": "vite build --outDir dist/client",
+    "build:ssr": "vite build --outDir dist/ssr --ssr src/entry-server.tsx",
+    "build:server": "tsup",
+    "lint": "eslint . --max-warnings=0",
+    "lint:fix": "pnpm lint --fix",
+    "types": "tsc",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.456.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/serve-static": "^1.15.7",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.13.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "eslint-plugin-tailwindcss": "^3.17.5",
+    "express": "^4.21.1",
+    "globals": "^15.11.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "nodemon": "^3.1.7",
+    "postcss": "^8.4.48",
+    "prettier": "^3.3.3",
+    "serve-static": "^1.16.2",
+    "tailwindcss": "^3.4.14",
+    "tsup": "^8.3.5",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.11.0",
+    "vite": "^5.4.11",
+    "vite-node": "^2.1.4",
+    "vite-tsconfig-paths": "^5.1.2"
+  },
+  "lint-staged": {
+    "./src/**/*.{js,ts,jsx,tsx}": "pnpm lint"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "server",
+      "src"
+    ],
+    "ext": "ts",
+    "exec": "vite-node server"
+  },
+  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1"
+}
