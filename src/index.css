@@ -65,3 +65,33 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/FiraSans-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/FiraSans-Medium.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/FiraSans-Bold.ttf') format('truetype');
+  font-display: swap;
+}
+
+html {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+

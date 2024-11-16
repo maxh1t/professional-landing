@@ -1,7 +1,12 @@
 import { renderToString } from 'react-dom/server'
 
 import { App } from '@/app'
+import { Theme } from '@/context/theme'
 
-export function render() {
-  return renderToString(<App />)
+type Args = {
+  theme: Theme
+}
+
+export function render({ theme }: Args) {
+  return renderToString(<App theme={theme} />)
 }

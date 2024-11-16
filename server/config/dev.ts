@@ -4,6 +4,8 @@ import fs from 'fs'
 import express from 'express'
 
 import { HTML_KEY } from '../constants'
+import { applyServerTheme } from '../lib/applyServerTheme'
+import { getClientTheme } from '../lib/getClientTheme'
 
 const PATH_ENTRY_SERVER = '/src/entry-server.tsx'
 
@@ -24,8 +26,10 @@ export async function setupDev(app: express.Application) {
       template = await vite.transformIndexHtml(req.originalUrl, template)
 
       const { render } = await vite.ssrLoadModule(PATH_ENTRY_SERVER)
-      const appHtml = await render()
-      const html = template.replace(HTML_KEY, appHtml)
+      const appHtml = await render({ theme: getClientTheme(req) })
+
+      let html = template.replace(HTML_KEY, appHtml)
+      html = applyServerTheme({ req, html })
 
       res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
     } catch (e) {

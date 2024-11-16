@@ -1,5 +1,14 @@
 import { HomePage } from '@/pages/Home'
+import { Theme, ThemeProvider } from '@/context/theme'
 
-export function App() {
-  return <HomePage />
+type Props = {
+  theme?: Theme
+}
+
+export function App({ theme }: Props) {
+  return (
+    <ThemeProvider initialTheme={theme}>
+      <HomePage />
+    </ThemeProvider>
+  )
 }
