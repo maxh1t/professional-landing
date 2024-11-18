@@ -1,9 +1,8 @@
-import { ExternalLink } from 'lucide-react'
-
 import { PROJECTS } from './constants'
 
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui'
 import { GitHub } from '@/assets/icons/GitHub'
+import { ExternalLink } from '@/assets/icons/ExternalLink'
 
 export function ProjectsSection() {
   return (

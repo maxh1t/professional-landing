@@ -1,7 +1,9 @@
 import { FunctionComponent, SVGProps } from 'react'
-import { Moon, Sun, SunMoon } from 'lucide-react'
 
 import { Theme } from '@/context/theme'
+import { Sun } from '@/assets/icons/Sun'
+import { Moon } from '@/assets/icons/Moon'
+import { SunMoon } from '@/assets/icons/SunMoon'
 
 type NavItem = {
   text: string

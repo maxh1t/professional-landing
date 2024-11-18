@@ -1,9 +1,11 @@
 import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
 
 import { NAV_ITEMS } from '../constants'
 
 import { ThemeButton } from './ThemeButton'
+
+import { X } from '@/assets/icons/X'
+import { Menu } from '@/assets/icons/Menu'
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)

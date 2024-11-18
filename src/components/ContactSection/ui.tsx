@@ -1,8 +1,9 @@
-import { Clock, Mail, MapPin } from 'lucide-react'
-
 import { SOCIAL_LINKS } from './constants'
 
 import { Button } from '@/components/ui'
+import { Mail } from '@/assets/icons/Mail'
+import { Clock } from '@/assets/icons/Clock'
+import { MapPin } from '@/assets/icons/MapPin'
 
 export function ContactSection() {
   return (

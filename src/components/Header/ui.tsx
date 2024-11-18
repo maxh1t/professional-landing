@@ -9,7 +9,6 @@ export function Header() {
         src='/maksim-riazantsev-profile.jpg'
         alt='Maksim Riazantsev profile picture'
         itemProp='image'
-        loading='lazy'
         className='mt-4 size-28 rounded-full border border-border md:mt-6 md:size-36'
       />
     </header>
