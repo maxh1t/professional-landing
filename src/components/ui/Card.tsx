@@ -13,12 +13,12 @@ const CardHeader = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(({
 CardHeader.displayName = 'CardHeader'
 
 const CardTitle = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn('font-semibold leading-none tracking-tight', className)} {...props} />
+  <div ref={ref} className={cn('leading-none tracking-tight text-lg md:text-xl', className)} {...props} />
 ))
 CardTitle.displayName = 'CardTitle'
 
 const CardDescription = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn('text-sm text-muted-foreground', className)} {...props} />
+  <div ref={ref} className={cn('text-sm md:text-base', className)} {...props} />
 ))
 CardDescription.displayName = 'CardDescription'
 

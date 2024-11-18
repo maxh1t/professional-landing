@@ -20,14 +20,14 @@ export function ContactSection() {
           </a>
         </div>
         <div className='flex items-center space-x-3'>
-          <MapPin />
-          <span className='text-base text-primary md:text-lg' itemProp='address'>
-            Open to Remote Opportunities
-          </span>
+          <Clock />
+          <span className='text-base text-primary md:text-lg'>Timezone: UTC +8</span>
         </div>
         <div className='flex items-center space-x-3'>
-          <Clock />
-          <span className='text-base text-primary md:text-lg'>Timezone: UTC +3</span>
+          <MapPin />
+          <span className='text-base text-primary md:text-lg' itemProp='address'>
+            Bali, Indonesia | Open to Remote Work
+          </span>
         </div>
       </div>
       <div className='mt-6 flex flex-wrap items-center gap-4 md:gap-6'>

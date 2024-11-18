@@ -1,1 +1,17 @@
-export const SKILLS = ['JavaScript', 'React', 'TypeScript', 'Next.js', 'Node.js', 'Vite', 'Tailwind CSS']
+export const SKILLS = [
+  'JavaScript',
+  'TypeScript',
+  'React.js',
+  'Node.js',
+  'Next.js',
+  'CSS',
+  'HTML',
+  'PWA',
+  'Jest',
+  'Vite',
+  'Docker',
+  'CI/CD',
+  'Responsive Design',
+  'Cross-team collaboration',
+  'Problem solving',
+]

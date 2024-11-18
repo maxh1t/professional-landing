@@ -9,9 +9,9 @@ export function ProjectsSection() {
   return (
     <section id='projects' className='scroll-mt-20 space-y-4'>
       <h2 className='text-left text-2xl font-semibold md:text-3xl'>Projects</h2>
-      <ul className='mt-6 space-y-6 md:grid md:grid-cols-2 md:gap-6 md:space-y-0'>
-        {PROJECTS.map(({ id, title, description, link, github }) => (
-          <Card key={id} className='flex flex-col justify-between'>
+      <div className='mt-6 space-y-6 md:grid md:grid-cols-2 md:gap-6 md:space-y-0'>
+        {PROJECTS.map(({ title, description, link, github }) => (
+          <Card key={title} className='flex flex-col justify-between'>
             <CardHeader className='pb-4'>
               <CardTitle>{title}</CardTitle>
               <CardDescription>{description}</CardDescription>
@@ -42,7 +42,7 @@ export function ProjectsSection() {
             </CardFooter>
           </Card>
         ))}
-      </ul>
+      </div>
     </section>
   )
 }
