@@ -3,6 +3,7 @@ import path from 'path'
 
 import express from 'express'
 import serveStatic from 'serve-static'
+import compression from 'compression'
 
 import { HTML_KEY } from '../constants'
 import { applyServerTheme } from '../lib/applyServerTheme'
@@ -13,6 +14,7 @@ const PATH_CLIENT_HTML = '../client/index.html'
 const PATH_ENTRY_SERVER = '../ssr/entry-server.js'
 
 export async function setupProd(app: express.Application) {
+  app.use(compression())
   app.use(serveStatic(PATH_CLIENT, { index: false }))
 
   app.get('*', async (req, res) => {

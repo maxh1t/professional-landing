@@ -8,5 +8,5 @@ export default defineConfig({
   clean: true,
   minify: true,
   external: ['lightningcss', 'esbuild', 'vite'],
-  noExternal: ['express', 'serve-static', 'cookie'],
+  noExternal: ['express', 'serve-static', 'cookie', 'compress'],
 })
