@@ -1,10 +1,10 @@
-import { Navbar } from '@/components/Navbar'
-import { Header } from '@/components/Header'
 import { AboutSection } from '@/components/AboutSection'
-import { SkillsSection } from '@/components/SkillsSection'
-import { ExperienceSection } from '@/components/ExperienceSection'
-import { ProjectsSection } from '@/components/ProjectsSection'
 import { ContactSection } from '@/components/ContactSection'
+import { ExperienceSection } from '@/components/ExperienceSection'
+import { Header } from '@/components/Header'
+import { Navbar } from '@/components/Navbar'
+import { ProjectsSection } from '@/components/ProjectsSection'
+import { SkillsSection } from '@/components/SkillsSection'
 
 export function HomePage() {
   return (

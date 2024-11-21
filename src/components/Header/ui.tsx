@@ -7,7 +7,7 @@ export function Header() {
       <p className='mt-2 text-base text-muted-foreground md:mt-4 md:text-xl'>Front-End Engineer | React</p>
       <img
         src='/maksim-riazantsev-profile.jpg'
-        alt='Maksim Riazantsev profile picture'
+        alt='Maksim Riazantsev profile'
         itemProp='image'
         className='mt-4 size-28 rounded-full border border-border md:mt-6 md:size-36'
       />

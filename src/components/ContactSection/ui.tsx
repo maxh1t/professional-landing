@@ -1,9 +1,9 @@
-import { SOCIAL_LINKS } from './constants'
-
-import { Button } from '@/components/ui'
-import { Mail } from '@/assets/icons/Mail'
 import { Clock } from '@/assets/icons/Clock'
+import { Mail } from '@/assets/icons/Mail'
 import { MapPin } from '@/assets/icons/MapPin'
+import { Button } from '@/components/ui'
+
+import { SOCIAL_LINKS } from './constants'
 
 export function ContactSection() {
   return (

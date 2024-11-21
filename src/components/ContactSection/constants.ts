@@ -1,9 +1,9 @@
 import { FunctionComponent, SVGProps } from 'react'
 
-import { LinkedIn } from '@/assets/icons/LinkedIn'
 import { GitHub } from '@/assets/icons/GitHub'
-import { WhatsApp } from '@/assets/icons/WhatsApp'
+import { LinkedIn } from '@/assets/icons/LinkedIn'
 import { Telegram } from '@/assets/icons/Telegram'
+import { WhatsApp } from '@/assets/icons/WhatsApp'
 
 type SocialLink = {
   href: string

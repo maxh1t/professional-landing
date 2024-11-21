@@ -1,53 +1,48 @@
 import js from '@eslint/js'
-import globals from 'globals'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
-import prettier from 'eslint-plugin-prettier'
-import jsxA11y from 'eslint-plugin-jsx-a11y'
 import importPlugin from 'eslint-plugin-import'
+import jsxA11y from 'eslint-plugin-jsx-a11y'
+import prettier from 'eslint-plugin-prettier'
 import pluginReact from 'eslint-plugin-react'
+import reactRefresh from 'eslint-plugin-react-refresh'
 import tailwindcss from 'eslint-plugin-tailwindcss'
+import globals from 'globals'
+import tseslint from 'typescript-eslint'
 
-export default tseslint.config({ ignores: ['dist', 'node_modules'] }, pluginReact.configs.flat.recommended, {
-  files: ['**/*.{ts,tsx,js,jsx}'],
-  languageOptions: {
-    ecmaVersion: 'latest',
-    globals: globals.browser,
+export default tseslint.config(
+  { ignores: ['dist', 'node_modules'] },
+  pluginReact.configs.flat.recommended,
+  jsxA11y.flatConfigs.recommended,
+  ...tailwindcss.configs['flat/recommended'],
+  {
+    files: ['**/*.{ts,tsx,js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      globals: globals.browser,
+    },
+    settings: {
+      react: { version: 'detect' },
+    },
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    plugins: {
+      'react-refresh': reactRefresh,
+      import: importPlugin,
+      prettier,
+    },
+    rules: {
+      'no-console': ['warn', { allow: ['error', 'warn', 'debug'] }],
+      'react/react-in-jsx-scope': 'off',
+      'prettier/prettier': 'error',
+      'import/no-duplicates': 'error',
+      'import/order': [
+        'error',
+        {
+          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'type'],
+          pathGroups: [{ pattern: '@/**', group: 'internal', position: 'after' }],
+          pathGroupsExcludedImportTypes: ['builtin'],
+          'newlines-between': 'always',
+          alphabetize: { order: 'asc', caseInsensitive: true },
+        },
+      ],
+    },
   },
-  settings: {
-    react: { version: 'detect' },
-  },
-  extends: [js.configs.recommended, ...tseslint.configs.recommended, ...tailwindcss.configs['flat/recommended']],
-  plugins: {
-    'react-refresh': reactRefresh,
-    'jsx-a11y': jsxA11y,
-    import: importPlugin,
-    prettier,
-  },
-  rules: {
-    'no-console': ['warn', { allow: ['error', 'warn', 'debug'] }],
-    'react/react-in-jsx-scope': 'off',
-    'prettier/prettier': 'error',
-    'react/prop-types': 'off',
-    'jsx-a11y/alt-text': ['warn', { elements: ['img'], img: ['Image'] }],
-    'jsx-a11y/aria-props': 'warn',
-    'jsx-a11y/aria-proptypes': 'warn',
-    'jsx-a11y/aria-unsupported-elements': 'warn',
-    'jsx-a11y/role-has-required-aria-props': 'warn',
-    'jsx-a11y/role-supports-aria-props': 'warn',
-    'import/no-duplicates': 'error',
-    'import/order': [
-      'error',
-      {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
-        'newlines-between': 'always',
-      },
-    ],
-    'brace-style': 'error',
-    'object-curly-spacing': ['error', 'always'],
-    'no-multiple-empty-lines': ['error', { max: 2 }],
-    '@typescript-eslint/no-empty-interface': 0,
-    '@typescript-eslint/no-explicit-any': 0,
-    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-  },
-})
+)

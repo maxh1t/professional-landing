@@ -1,7 +1,7 @@
 import { createContext, useContext } from 'react'
 
-import { ThemeContextState } from './types'
 import { Theme } from './constants'
+import { ThemeContextState } from './types'
 
 const initialState: ThemeContextState = {
   theme: Theme.System,

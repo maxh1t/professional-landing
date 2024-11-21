@@ -1,9 +1,9 @@
 import { PropsWithChildren, useState } from 'react'
 
+import { Theme } from './constants'
 import { ThemeContext } from './context'
 import { getDefaultTheme, updateTheme } from './lib'
 import { ThemeContextState } from './types'
-import { Theme } from './constants'
 
 type Props = PropsWithChildren & {
   initialTheme?: Theme

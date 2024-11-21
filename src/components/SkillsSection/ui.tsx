@@ -1,6 +1,6 @@
-import { SKILLS } from './constants'
-
 import { Badge } from '@/components/ui'
+
+import { SKILLS } from './constants'
 
 export function SkillsSection() {
   return (

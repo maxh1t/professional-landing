@@ -1,7 +1,7 @@
-import { Theme } from './constants'
-
-import { serverThemeStore, clientThemeStore } from '@/lib/stores'
 import { SSR } from '@/constants'
+import { serverThemeStore, clientThemeStore } from '@/lib/stores'
+
+import { Theme } from './constants'
 
 export function getDefaultTheme(): Theme {
   const theme = (clientThemeStore.get() as Theme) || Theme.System

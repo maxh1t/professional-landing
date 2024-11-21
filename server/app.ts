@@ -1,7 +1,7 @@
 import express from 'express'
 
-import { PROD, SERVER_PORT } from './constants'
 import { setupProd, setupDev } from './config'
+import { PROD, SERVER_PORT } from './constants'
 
 export async function createServer() {
   const app = express()

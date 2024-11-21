@@ -1,9 +1,9 @@
 import fs from 'fs'
 import path from 'path'
 
+import compression from 'compression'
 import express from 'express'
 import serveStatic from 'serve-static'
-import compression from 'compression'
 
 import { HTML_KEY } from '../constants'
 import { applyServerTheme } from '../lib/applyServerTheme'

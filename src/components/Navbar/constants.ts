@@ -1,9 +1,9 @@
 import { FunctionComponent, SVGProps } from 'react'
 
-import { Theme } from '@/context/theme'
-import { Sun } from '@/assets/icons/Sun'
 import { Moon } from '@/assets/icons/Moon'
+import { Sun } from '@/assets/icons/Sun'
 import { SunMoon } from '@/assets/icons/SunMoon'
+import { Theme } from '@/context/theme'
 
 type NavItem = {
   text: string

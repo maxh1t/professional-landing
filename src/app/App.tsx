@@ -1,5 +1,5 @@
-import { HomePage } from '@/pages/Home'
 import { Theme, ThemeProvider } from '@/context/theme'
+import { HomePage } from '@/pages/Home'
 
 type Props = {
   theme?: Theme

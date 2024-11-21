@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
-import { THEME_OPTIONS } from '../constants'
-
-import { Theme, useThemeContext } from '@/context/theme'
 import { Button, Popover, PopoverContent, PopoverTrigger } from '@/components/ui'
+import { Theme, useThemeContext } from '@/context/theme'
+
+import { THEME_OPTIONS } from '../constants'
 
 export function ThemeButton() {
   const { theme, setTheme } = useThemeContext()
