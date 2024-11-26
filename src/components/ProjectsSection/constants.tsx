@@ -21,7 +21,8 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'Clock',
-    github: 'https://github.com/maxh1t/clock',
+    link: 'https://clock.maxh1t.xyz',
+    github: 'https://github.com/maxh1t/clock-app',
     description: (
       <>
         Built a clock application with React, featuring alarm, timer, time zones, and stopwatch functionality, with a
@@ -31,6 +32,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'Auth Form',
+    link: 'https://auth-form.maxh1t.xyz',
     github: 'https://github.com/maxh1t/auth-form',
     description: (
       <>

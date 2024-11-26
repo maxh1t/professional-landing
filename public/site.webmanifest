@@ -1,6 +1,6 @@
 {
-  "name": "Maksim Riazantsev | Frontend Engineer | maxh1t",
-  "short_name": "Maksim Riazantsev",
+  "name": "Maksim Riazantsev | maxh1t",
+  "short_name": "maxh1t",
   "description": "Frontend Engineer specializing in React and modern web development.",
   "start_url": "/",
   "display": "standalone",
@@ -31,6 +31,11 @@
      "src": "/icons/favicon-32x32.png",
      "type": "image/png",
      "sizes": "32x32"
+   },
+   {
+     "src": "/icons/favicon-96x96.png",
+     "type": "image/png",
+     "sizes": "96x96"
    }
   ]
 }

@@ -44,7 +44,7 @@ export function ContactSection() {
             <Icon className='size-6' />
           </a>
         ))}
-        <a href='/maksim-riazantsev-resume.pdf' target='_blank' rel='noopener noreferrer'>
+        <a href='/docs/maksim-riazantsev-resume.pdf' target='_blank' rel='noopener noreferrer'>
           <Button>Resume</Button>
         </a>
       </div>
