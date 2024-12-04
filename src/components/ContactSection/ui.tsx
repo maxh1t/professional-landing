@@ -27,7 +27,7 @@ export function ContactSection() {
         <div className='flex items-center space-x-3'>
           <MapPin />
           <span className='text-base text-primary md:text-lg' itemProp='address'>
-            Bali, Indonesia | Open to Remote Work
+            Da Nang, Vietnam
           </span>
         </div>
       </div>
