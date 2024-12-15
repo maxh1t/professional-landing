@@ -4,4 +4,4 @@ import { App } from '@/app'
 
 import './index.css'
 
-hydrateRoot(document.getElementById('app')!, <App />)
+hydrateRoot(document.getElementById('root')!, <App />)

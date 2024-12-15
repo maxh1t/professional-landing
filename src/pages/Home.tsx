@@ -5,10 +5,15 @@ import { Header } from '@/components/Header'
 import { Navbar } from '@/components/Navbar'
 import { ProjectsSection } from '@/components/ProjectsSection'
 import { SkillsSection } from '@/components/SkillsSection'
+import { ScrollArea } from '@/components/ui'
 
 export function HomePage() {
   return (
-    <div className='min-h-screen bg-background text-foreground' itemScope itemType='https://schema.org/Person'>
+    <ScrollArea
+      className='h-screen min-h-screen bg-background text-foreground'
+      itemScope
+      itemType='https://schema.org/Person'
+    >
       <Navbar />
       <div className='mx-auto max-w-4xl'>
         <Header />
@@ -20,6 +25,6 @@ export function HomePage() {
           <ContactSection />
         </main>
       </div>
-    </div>
+    </ScrollArea>
   )
 }

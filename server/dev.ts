@@ -1,15 +1,16 @@
 import fs from 'fs'
 import path from 'path'
 
-import express from 'express'
+import { Application } from 'express'
 
-import { HTML_KEY } from '../constants'
-import { applyServerTheme } from '../lib/applyServerTheme'
-import { getClientTheme } from '../lib/getClientTheme'
+import { HTML_KEY } from './constants'
+import { applyServerTheme } from './lib/applyServerTheme'
+import { getClientTheme } from './lib/getClientTheme'
 
-const PATH_ENTRY_SERVER = '/src/entry-server.tsx'
+const HTML_TEMPLATE_PATH = path.resolve(process.cwd(), 'index.html')
+const ENTRY_SERVER_PATH = path.resolve(process.cwd(), 'src/entry-server.tsx')
 
-export async function setupDev(app: express.Application) {
+export async function setupDev(app: Application) {
   const vite = await (
     await import('vite')
   ).createServer({
@@ -22,10 +23,10 @@ export async function setupDev(app: express.Application) {
 
   app.get('*', async (req, res, next) => {
     try {
-      let template = fs.readFileSync(path.resolve(process.cwd(), 'index.html'), 'utf-8')
+      let template = fs.readFileSync(HTML_TEMPLATE_PATH, 'utf-8')
       template = await vite.transformIndexHtml(req.originalUrl, template)
 
-      const { render } = await vite.ssrLoadModule(PATH_ENTRY_SERVER)
+      const { render } = await vite.ssrLoadModule(ENTRY_SERVER_PATH)
       const appHtml = await render({ theme: getClientTheme(req) })
 
       let html = template.replace(HTML_KEY, appHtml)
@@ -34,8 +35,8 @@ export async function setupDev(app: express.Application) {
       res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
     } catch (e) {
       vite.ssrFixStacktrace(e as Error)
+      console.error((e as Error).stack)
       next(e)
-      console.error(e)
     }
   })
 }

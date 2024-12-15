@@ -1,11 +1,11 @@
-FROM node:20-alpine
-
-RUN npm install -g pnpm
+FROM node:22-alpine
 
 WORKDIR /app
 
 COPY dist ./dist
 COPY package.json ./package.json
+
+RUN corepack enable
 
 EXPOSE 3000
 

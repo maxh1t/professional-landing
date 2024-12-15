@@ -3,7 +3,6 @@ import { FunctionComponent, SVGProps } from 'react'
 import { GitHub } from '@/assets/icons/GitHub'
 import { LinkedIn } from '@/assets/icons/LinkedIn'
 import { Telegram } from '@/assets/icons/Telegram'
-import { WhatsApp } from '@/assets/icons/WhatsApp'
 
 type SocialLink = {
   href: string
@@ -21,11 +20,6 @@ export const SOCIAL_LINKS: SocialLink[] = [
     href: 'https://github.com/maxh1t',
     label: 'GitHub',
     icon: GitHub,
-  },
-  {
-    href: 'https://wa.me/79054696795',
-    label: 'WhatsApp',
-    icon: WhatsApp,
   },
   {
     href: 'https://t.me/maxh1t',

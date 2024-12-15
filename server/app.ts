@@ -1,7 +1,8 @@
 import express from 'express'
 
-import { setupProd, setupDev } from './config'
-import { PROD, SERVER_PORT } from './constants'
+import { PROD, APP_PORT } from './constants'
+import { setupDev } from './dev'
+import { setupProd } from './prod'
 
 export async function createServer() {
   const app = express()
@@ -12,9 +13,9 @@ export async function createServer() {
     await setupDev(app)
   }
 
-  app.listen(SERVER_PORT, () => {
+  app.listen(APP_PORT, () => {
     // eslint-disable-next-line no-console
-    console.log(`http://localhost:${SERVER_PORT}`)
+    console.log(`http://localhost:${APP_PORT}`)
   })
 }
 

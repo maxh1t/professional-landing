@@ -22,7 +22,7 @@ export function ContactSection() {
         </div>
         <div className='flex items-center space-x-3'>
           <Clock />
-          <span className='text-base text-primary md:text-lg'>Timezone: UTC +8</span>
+          <span className='text-base text-primary md:text-lg'>UTC +7</span>
         </div>
         <div className='flex items-center space-x-3'>
           <MapPin />
