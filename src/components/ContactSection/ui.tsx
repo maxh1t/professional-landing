@@ -1,7 +1,6 @@
 import { Clock } from '@/client/assets/icons/Clock'
 import { Mail } from '@/client/assets/icons/Mail'
 import { MapPin } from '@/client/assets/icons/MapPin'
-import { Button } from '@/client/components/ui'
 
 import { SOCIAL_LINKS } from './constants'
 
@@ -44,9 +43,6 @@ export function ContactSection() {
             <Icon className='size-6' />
           </a>
         ))}
-        <a href='/docs/maksim-riazantsev-resume.pdf' target='_blank' rel='noopener noreferrer'>
-          <Button>Resume</Button>
-        </a>
       </div>
     </section>
   )
