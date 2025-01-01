@@ -3,7 +3,6 @@ import { ReactNode } from 'react'
 type Job = {
   title: string
   company: string
-  location: string
   start: string
   end: string
   description: ReactNode[]
@@ -12,28 +11,28 @@ export const JOBS: Job[] = [
   {
     title: 'Front-End Engineer',
     company: 'Raiffeisen Bank',
-    location: 'Remote',
     start: 'Apr 2024',
     end: 'Present',
     description: [
       <>
-        Reused 70% of business logic to expand the internal chat platform, <strong>saving six months</strong> of UI
-        development time.
-      </>,
-      <>Enhanced platform performance by 30% while adding new features and maintaining scalability.</>,
-      <>
-        Independently developed and <strong>integrated a micro-frontend</strong> for a large-scale platform.
+        Integrated a messenger into a hotline system, improving performance by <strong>40%</strong> and{' '}
+        <strong>saving 6 months of development time</strong>.
       </>,
       <>
-        {' '}
-        Designed the build process and implemented <strong>CI/CD pipelines</strong>, reducing build times by 40%.
+        Designed a modular architecture, accelerating feature delivery by <strong>25%</strong>.
+      </>,
+      <>
+        Developed and embedded two micro-frontends into an internal platform, enhancing user experience and optimizing
+        platform efficiency.
+      </>,
+      <>
+        Set up CI/CD pipelines, reducing build times by <strong>40%</strong>.
       </>,
     ],
   },
   {
     title: 'Front-End Engineer',
     company: 'Toolkit',
-    location: 'Remote',
     start: 'Mar 2023',
     end: 'Mar 2024',
     description: [
@@ -42,8 +41,8 @@ export const JOBS: Job[] = [
         including both business logic and application structure.
       </>,
       <>
-        Identified and implemented the right level of abstraction to support project <strong>scalability</strong> and
-        future extensions.
+        Implemented <strong>custom server-side rendering</strong> with React.js, improving application security and
+        increasing page load speed by <strong>30%</strong>.
       </>,
       <>
         Achieved and maintained <strong>100% test coverage</strong> while ensuring ease of project expansion.
@@ -61,7 +60,6 @@ export const JOBS: Job[] = [
   {
     title: 'Front-End Engineer',
     company: 'GCode',
-    location: 'Remote',
     start: 'Nov 2021',
     end: 'Feb 2023',
     description: [
