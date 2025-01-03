@@ -1,10 +1,11 @@
-import { AboutSection } from '@/client/components/AboutSection'
-import { ContactSection } from '@/client/components/ContactSection'
-import { ExperienceSection } from '@/client/components/ExperienceSection'
+import { About } from '@/client/components/About'
+import { Articles } from '@/client/components/Articles'
+import { Contact } from '@/client/components/Contact'
+import { Experience } from '@/client/components/Experience'
 import { Header } from '@/client/components/Header'
 import { Navbar } from '@/client/components/Navbar'
-import { ProjectsSection } from '@/client/components/ProjectsSection'
-import { SkillsSection } from '@/client/components/SkillsSection'
+import { Projects } from '@/client/components/Projects'
+import { Skills } from '@/client/components/Skills'
 import { ScrollArea } from '@/client/components/ui'
 
 export function Home() {
@@ -19,11 +20,12 @@ export function Home() {
       <div className='mx-auto max-w-4xl'>
         <Header />
         <main className='mt-8 space-y-16 px-4 pb-4 md:mt-12 md:space-y-24 md:px-8 md:pb-16'>
-          <AboutSection />
-          <SkillsSection />
-          <ExperienceSection />
-          <ProjectsSection />
-          <ContactSection />
+          <About />
+          <Skills />
+          <Experience />
+          <Projects />
+          <Articles />
+          <Contact />
         </main>
       </div>
     </ScrollArea>

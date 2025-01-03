@@ -3,9 +3,10 @@ import { FunctionComponent, SVGProps } from 'react'
 import { DevTo } from '@/client/assets/icons/DevTo'
 import { Facebook } from '@/client/assets/icons/Facebook'
 import { GitHub } from '@/client/assets/icons/GitHub'
-import { Instagram } from '@/client/assets/icons/instagram'
+import { Instagram } from '@/client/assets/icons/Instagram'
 import { LinkedIn } from '@/client/assets/icons/LinkedIn'
 import { Telegram } from '@/client/assets/icons/Telegram'
+import { XSocialNetwork } from '@/client/assets/icons/XSocialNetwork'
 
 type SocialLink = {
   href: string
@@ -33,6 +34,11 @@ export const SOCIAL_LINKS: SocialLink[] = [
     href: 'https://www.instagram.com/max_h1t',
     label: 'Instagram',
     icon: Instagram,
+  },
+  {
+    href: 'https://x.com/max_h1t',
+    label: 'X',
+    icon: XSocialNetwork,
   },
   {
     href: 'https://t.me/maxh1t',

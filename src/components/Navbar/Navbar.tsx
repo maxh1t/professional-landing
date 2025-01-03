@@ -3,8 +3,7 @@ import { useState } from 'react'
 import { Menu } from '@/client/assets/icons/Menu'
 import { X } from '@/client/assets/icons/X'
 
-import { NAV_ITEMS } from '../constants'
-
+import { NAV_ITEMS } from './constants'
 import { ThemeButton } from './ThemeButton'
 
 export function Navbar() {
@@ -45,7 +44,7 @@ export function Navbar() {
         </div>
       </div>
       {menuOpen && (
-        <div className='bg-primary-foreground shadow-md dark:text-white md:hidden'>
+        <div className='bg-primary-foreground pb-2 shadow-md dark:text-white md:hidden'>
           {NAV_ITEMS.map(({ id, text }) => (
             <a href={`#${id}`} key={id} className='block px-4 py-2 hover:bg-muted' onClick={handleMenuToggleClick}>
               {text}

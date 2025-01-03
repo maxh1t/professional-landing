@@ -4,10 +4,10 @@ import { MapPin } from '@/client/assets/icons/MapPin'
 
 import { SOCIAL_LINKS } from './constants'
 
-export function ContactSection() {
+export function Contact() {
   return (
     <section id='contact' className='scroll-mt-20 space-y-8'>
-      <h2 className='text-left text-2xl font-semibold md:text-3xl'>Contact Information</h2>
+      <h2 className='text-left text-2xl font-semibold md:text-3xl'>Contact</h2>
       <div className='mt-6 space-y-4 text-left'>
         <div className='flex items-center space-x-3'>
           <Mail />

@@ -1,10 +1,10 @@
-import { ExternalLink } from '@/client/assets/icons/ExternalLink'
 import { GitHub } from '@/client/assets/icons/GitHub'
+import { Link } from '@/client/assets/icons/Link'
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from '@/client/components/ui'
 
 import { PROJECTS } from './constants'
 
-export function ProjectsSection() {
+export function Projects() {
   return (
     <section id='projects' className='scroll-mt-20 space-y-4'>
       <h2 className='text-left text-2xl font-semibold md:text-3xl'>Projects</h2>
@@ -24,7 +24,7 @@ export function ProjectsSection() {
                   aria-label={`Visit ${title}`}
                   className='text-primary'
                 >
-                  <ExternalLink className='size-5' />
+                  <Link className='size-5' />
                 </a>
               )}
               {github && (

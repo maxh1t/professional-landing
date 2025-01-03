@@ -5,7 +5,7 @@ import { useThemeContext } from '@/client/context/theme'
 import { cn } from '@/client/lib/utils'
 import { Theme } from '@/shared'
 
-import { THEME_OPTIONS } from '../constants'
+import { THEME_OPTIONS } from './constants'
 
 export function ThemeButton() {
   const { theme, setTheme } = useThemeContext()

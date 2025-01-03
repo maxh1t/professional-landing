@@ -14,6 +14,7 @@ export const NAV_ITEMS: NavItem[] = [
   { text: 'About', id: 'about' },
   { text: 'Experience', id: 'experience' },
   { text: 'Projects', id: 'projects' },
+  { text: 'Articles', id: 'articles' },
   { text: 'Contact', id: 'contact' },
 ]
 

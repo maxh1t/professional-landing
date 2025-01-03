@@ -1,4 +1,4 @@
-export function AboutSection() {
+export function About() {
   return (
     <section id='about' className='scroll-mt-20 space-y-4'>
       <h2 className='text-left text-2xl font-semibold md:text-3xl'>About</h2>

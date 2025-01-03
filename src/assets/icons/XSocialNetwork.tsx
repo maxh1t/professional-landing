@@ -1,6 +1,6 @@
 import { SVGProps } from 'react'
 
-export function ExternalLink(props: SVGProps<SVGSVGElement>) {
+export function XSocialNetwork(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -14,9 +14,8 @@ export function ExternalLink(props: SVGProps<SVGSVGElement>) {
       strokeLinejoin='round'
       {...props}
     >
-      <path d='M15 3h6v6' />
-      <path d='M10 14 21 3' />
-      <path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6' />
+      <title>X</title>
+      <path d='M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z' />
     </svg>
   )
 }
