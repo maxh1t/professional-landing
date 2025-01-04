@@ -10,7 +10,7 @@ export const ARTICLES: Article[] = [
   },
   {
     title: 'Advanced React SSR Techniques with Streaming and Dynamic Data',
-    link: '',
+    link: 'https://dev.to/maxh1t/advanced-react-ssr-techniques-with-streaming-and-dynamic-data-mf6',
   },
   {
     title: 'Setting Up Themes in SSR React Applications',

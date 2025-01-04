@@ -20,7 +20,7 @@ export function Articles() {
               {title}
             </a>
           ) : (
-            <div key={title} className='flex items-center justify-between border-b py-4'>
+            <div key={title} className='flex items-center justify-between gap-2 border-b py-4'>
               {title}
               <Badge variant='outline' className='h-fit whitespace-nowrap'>
                 Upcoming

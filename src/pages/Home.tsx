@@ -6,16 +6,10 @@ import { Header } from '@/client/components/Header'
 import { Navbar } from '@/client/components/Navbar'
 import { Projects } from '@/client/components/Projects'
 import { Skills } from '@/client/components/Skills'
-import { ScrollArea } from '@/client/components/ui'
 
 export function Home() {
   return (
-    <ScrollArea
-      id='scroll-area'
-      className='h-screen min-h-screen bg-background text-foreground'
-      itemScope
-      itemType='https://schema.org/Person'
-    >
+    <div className='h-screen min-h-screen bg-background text-foreground' itemScope itemType='https://schema.org/Person'>
       <Navbar />
       <div className='mx-auto max-w-4xl'>
         <Header />
@@ -28,6 +22,6 @@ export function Home() {
           <Contact />
         </main>
       </div>
-    </ScrollArea>
+    </div>
   )
 }

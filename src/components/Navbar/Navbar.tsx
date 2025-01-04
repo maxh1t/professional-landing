@@ -13,12 +13,7 @@ export function Navbar() {
   }
 
   const handleLogoClick = () => {
-    const scrollArea = document.querySelector('#scroll-area') as HTMLDivElement
-    const childDiv = scrollArea?.querySelector('div')
-
-    if (childDiv) {
-      childDiv.scrollTo({ top: 0 })
-    }
+    window.scrollTo({ top: 0 })
   }
 
   return (
