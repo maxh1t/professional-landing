@@ -1,0 +1,18 @@
+export const SKILLS = [
+  'JavaScript',
+  'TypeScript',
+  'React.js',
+  'Next.js',
+  'Redux',
+  'Zustand',
+  'React Query',
+  'Tailwind CSS',
+  'ShadCN',
+  'Webpack',
+  'Vite',
+  'Chart.js',
+  'REST APIs',
+  'WebSocket',
+  'GraphQL',
+  'Docker',
+]
